@@ -1,4 +1,6 @@
-
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
 .page-wrapper {
     display: flex;
@@ -23,15 +25,22 @@ form {
     gap: 8px;
 }
 
+.active-player {
+    font-size: 35px;
+}
 .board-wrapper {
     display: grid;
+    min-height: 300px;
+    min-width: 300px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
 }
 
 .board-wrapper > * {
     padding: 8px;
-    font-size: x-large;
+    font-size: 65px;
+    text-align: center;
+    align-items: center;
 }
 
 .board-wrapper div:nth-child(1) {

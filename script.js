@@ -91,6 +91,9 @@ const game = (function () {
                 activePlayerSwitch();
             }
         })
+        //listener to add display for active player's turn
+        const announceDiv = document.querySelector(".active-player");
+        announceDiv.textContent = activePlayer.name + "'s turn to place " + activePlayer.marker;
         activeBoard.reset();
         activeBoard.render();
   
@@ -102,6 +105,7 @@ const game = (function () {
             else {
                 activePlayer = playerX;
             }
+            announceDiv.textContent = activePlayer.name + "'s turn to place " + activePlayer.marker;
         }
         //declare winner function
         function declareWinner(player) {
